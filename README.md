@@ -1,8 +1,8 @@
-# Analytics Pvt Ltd: DevOps Automation Project
+## DevOps Automation Project
 
 ## 📝 Project Overview
 
-This project was developed for Analytics Pvt Ltd to address the growing demand for their product. It implements a comprehensive DevOps lifecycle to automate the deployment, scaling, and operation of their application containers. The solution replaces their previous monolithic architecture with a modern, containerized approach managed by Kubernetes, ensuring high availability and scalability.
+This project was developed to implements a comprehensive DevOps lifecycle to automate the deployment, scaling, and operation of application containers. The solution uses monolithic architecture with a modern, containerized approach managed by Kubernetes, ensuring high availability and scalability.
 
 ---
 
@@ -37,7 +37,7 @@ The DevOps lifecycle is designed to be fully automated and integrated. The follo
 | :--- | :--- |
 | **AWS** | Cloud provider for hosting the entire infrastructure. |
 | **Terraform** | Infrastructure as Code (IaC) tool for creating and managing AWS resources. |
-| **Configuration Management** | Tool (e.g., Ansible, Chef) to automate software installation and configuration on servers. |
+| **Configuration Management** | Tool Ansible to automate software installation and configuration on servers. |
 | **Git** | Version control system for the application code. |
 | **Jenkins** | Automation server for orchestrating the CI/CD pipeline. |
 | **Docker** | Containerization platform for packaging the application and its dependencies. |
@@ -49,7 +49,6 @@ The DevOps lifecycle is designed to be fully automated and integrated. The follo
 
 To support the pipeline, specific software is installed on each worker machine using a configuration management tool:
 
-* **Worker1**: `Jenkins`, `Java`
-* **Worker2**: `Docker`, `Kubernetes`
-* **Worker3**: `Java`, `Docker`, `Kubernetes`
-* **Worker4**: `Docker`, `Kubernetes`
+* **Worker1**: `Jenkins`, `Java` ( this instance will be used as jenkins master )
+* **Worker2**: `Docker`, `Kubernetes`, `Java` (this will be used as k8s master and jenkins slave)
+* **Worker3**: `Kubernetes` (this will be used as k8s worker node)
